@@ -230,6 +230,7 @@ static void sendmon(Client *c, Monitor *m);
 static void setclientstate(Client *c, long state);
 static void setfocus(Client *c);
 static void setfullscreen(Client *c, int fullscreen);
+static void fullscreenmode(const Arg *arg);
 static void setgaps(const Arg *arg);
 static void setlayout(const Arg *arg);
 static void setmfact(const Arg *arg);
@@ -1708,6 +1709,17 @@ setfullscreen(Client *c, int fullscreen)
 }
 
 void
+fullscreenmode(const Arg *arg)
+{
+    if (!selmon->sel)
+	    return;
+    if (!selmon->sel->isfullscreen)
+	    setfullscreen(selmon->sel, 1);
+    else if (selmon->sel->isfullscreen)
+	    setfullscreen(selmon->sel, 0);
+}
+
+void
 setgaps(const Arg *arg)
 {
 	if ((arg->i == 0) || (selmon->gappx + arg->i < 0))
@@ -1901,17 +1913,15 @@ tile(Monitor *m)
 		mw = m->nmaster ? m->ww * m->mfact : 0;
 	else
 		mw = m->ww - m->gappx;
-	for (i = 0, my = ty = m->gappx, c = nexttiled(m -> clients); c; c = nexttiled(c->next), i++)
+	for (i = 0, my = ty = m->gappx, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
 		if (i < m->nmaster) {
 			h = (m->wh - my) / (MIN(n, m->nmaster) - i) - m->gappx;
 			resize(c, m->wx + m->gappx, m->wy + my, mw - (2*c->bw) - m->gappx, h - (2*c->bw), 0);
-			//if (my + HEIGHT(c) < m->wh)
-				my += HEIGHT(c) + m->gappx;
+			my += HEIGHT(c) + m->gappx;
 		} else {
 			h = (m->wh - ty) / (n - i) - m->gappx;
 			resize(c, m->wx + mw + m->gappx, m->wy + ty, m->ww - mw - (2*c->bw) - 2*m->gappx, h - (2*c->bw), 0);
-			//if (ty + HEIGHT(c) < m->wh)
-				ty += HEIGHT(c) + m->gappx;
+			ty += HEIGHT(c) + m->gappx;
 		}
 }
 
