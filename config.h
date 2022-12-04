@@ -34,7 +34,7 @@ static const Rule rules[] = {
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
  	// { "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
 	// { "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
-	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ "St",         NULL,     NULL,           0,         0,          1,           0,        -1 },
 	// { NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
@@ -70,7 +70,7 @@ static const char *medplaypausecmd[] = { "playerctl", "play-pause", NULL };
 static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
 static const char sccmd[] = "maim -s -u | xclip -selection clipboard -t image/png";
-static const char compositorcmd[] = "pgrep picom >/dev/null && pkill picom || picom --experimental-backends";
+static const char compositorcmd[] = "pgrep picom >/dev/null && pkill picom || picom --config ~/.config/picom/picom.conf";
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
