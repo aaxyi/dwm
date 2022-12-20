@@ -5,7 +5,7 @@ Concise patch collection for [suckless' dwm].
 [suckless' dwm]: https://dwm.suckless.org/
 
 -   Window "swallowing" - Child processes are drawn over the parent process to free up screen
-    space
+    space - **⚠️ BROKEN ON FREEBSD, REVERTED FOR NOW ⚠️** Consider using [sw] instead
 -   Auto start - Alternative shell script-based auto start support
 -   Gaps - Support for outer window gaps
 -   XRDB - X.org xrdb/xresources color support
@@ -13,3 +13,5 @@ Concise patch collection for [suckless' dwm].
 
 The main target platform for this fork is FreeBSD. You may need to tweak `config.mk` to
 make it work on other operating systems.
+
+[sw]: https://code.axyria.dev/sw
