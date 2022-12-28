@@ -4,7 +4,7 @@
 
 /* appearance */
 static const unsigned int borderpx = 1; /* border pixel of windows */
-static const unsigned int gappx = 10;   /* gaps between windows */
+static const unsigned int gappx = 20;   /* gaps between windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const int showbar = 1;           /* 0 means no bar */
 static const int topbar = 1;            /* 0 means bottom bar */
@@ -26,7 +26,7 @@ static char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = {"[cmd]", "[www]", "chat", "play", "sys", "med"};
+static const char *tags[] = {"[cmd]", "[www]", "[dev]", "chat", "sys", "med"};
 
 static const unsigned int ulinepad =
     5; /* horizontal padding between the underline and tag */
