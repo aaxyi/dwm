@@ -19,6 +19,7 @@ static char normfgcolor[] = "#bbbbbb";
 static char selfgcolor[] = "#eeeeee";
 static char selbordercolor[] = "#005577";
 static char selbgcolor[] = "#005577";
+static char normbgcolor_alt[] = "#222222";
 static char *colors[][3] = {
     /*               fg           bg           border   */
     [SchemeNorm] = {normfgcolor, normbgcolor, normbordercolor},
@@ -37,6 +38,12 @@ static const unsigned int ulinevoffset =
     0; /* how far above the bottom of the bar the line should appear */
 static const int ulineall =
     0; /* 1 to show underline on all tags, 0 for just the active ones */
+
+static const char *tagsel[][2] = {
+    {normfgcolor, normbgcolor_alt}, {normfgcolor, normbgcolor_alt},
+    {normfgcolor, normbgcolor_alt}, {normfgcolor, normbgcolor_alt},
+    {normfgcolor, normbgcolor_alt}, {normfgcolor, normbgcolor_alt},
+};
 
 static const Rule rules[] = {
     /* xprop(1):
