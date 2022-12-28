@@ -86,7 +86,7 @@
 
 /* enums */
 enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
-enum { SchemeNorm, SchemeSel };                  /* color schemes */
+enum { SchemeNorm, SchemeSel, SchemeTitle };     /* color schemes */
 enum {
   NetSupported,
   NetWMName,
@@ -888,7 +888,7 @@ void drawbar(Monitor *m) {
 
   if ((w = m->ww - tw - x) > bh) {
     if (m->sel) {
-      drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
+      drw_setscheme(drw, scheme[SchemeTitle]);
       XSetErrorHandler(xerrordummy);
       drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
       XSync(dpy, False);

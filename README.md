@@ -16,6 +16,7 @@ Concise patch collection for [suckless' dwm].
 -   alwayscenter - Floating windows are going to be centered by default
 -   statuspadding - Inner padding for the status bar
 -   status2d - custom color support for the status bar
+-   rainbowtags - specific colors for each tag
 
 The main target platform for this fork is FreeBSD. You may need to tweak `config.mk` to
 make it work on other operating systems.
