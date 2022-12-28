@@ -1,4 +1,4 @@
-# `axyriah/dwm`
+# `aaxyi/dwm`
 
 Concise patch collection for [suckless' dwm].
 
