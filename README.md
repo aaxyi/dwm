@@ -14,6 +14,7 @@ Concise patch collection for [suckless' dwm].
 -   underlinetags - Underline active tags
 -   nomonocleborders - No borders on monocle layout
 -   alwayscenter - Floating windows are going to be centered by default
+-   statuspadding - Inner padding for the status bar
 
 The main target platform for this fork is FreeBSD. You may need to tweak `config.mk` to
 make it work on other operating systems.
