@@ -4,7 +4,7 @@
 
 /* appearance */
 static const unsigned int borderpx = 1; /* border pixel of windows */
-static const unsigned int gappx = 20;   /* gaps between windows */
+static const unsigned int gappx = 10;   /* gaps between windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const int showbar = 1;           /* 0 means no bar */
 static const int topbar = 1;            /* 0 means bottom bar */
@@ -40,9 +40,9 @@ static const int ulineall =
     0; /* 1 to show underline on all tags, 0 for just the active ones */
 
 static const char *tagsel[][2] = {
-    {normfgcolor, normbgcolor_alt}, {normfgcolor, normbgcolor_alt},
-    {normfgcolor, normbgcolor_alt}, {normfgcolor, normbgcolor_alt},
-    {normfgcolor, normbgcolor_alt}, {normfgcolor, normbgcolor_alt},
+    {"#CB769E", normbgcolor_alt}, {"#5AD2F4", normbgcolor_alt},
+    {"#FED9B7", normbgcolor_alt}, {"#D3F3EE", normbgcolor_alt},
+    {"#B2B1CF", normbgcolor_alt}, {"#ADBCA5", normbgcolor_alt},
 };
 
 static const Rule rules[] = {
